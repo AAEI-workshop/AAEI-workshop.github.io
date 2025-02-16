@@ -69,6 +69,12 @@
         color: #333333;
     }
 
+    /* 避免 “Time” 和 “Talk” 一栏换行 */
+    td:first-child, th:first-child, 
+    td:nth-child(2), th:nth-child(2) { 
+        white-space: nowrap; /* 禁止换行 */
+    }
+    
     /* 奇偶行颜色区分 */
     tbody tr:nth-child(even) {
         background-color: #f9f9f9; /* 偶数行背景色 */
@@ -145,34 +151,58 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>9:00 - 9:45</td>
-                    <td>Speaker name: Title of Talk 1</td>
-                    <td>Sessions should not start before 8:30AM</td>
+                    <td>8:30 - 8:45</td>
+                    <td>Jing Huo</td>
+                    <td>Welcome and Introduction</td>
                 </tr>
                 <tr>
-                    <td>9:45 - 10:30</td>
-                    <td>End</td>
-                    <td>Sessions should end before lunch</td>
+                    <td>8:45 - 9:15</td>
+                    <td>Bo An</td>
+                    <td>President's Chair Professor and Head of Division of Artificial Intelligence at the College of Computing and Data Science of the Nanyang Technological University (NTU)</td>
                 </tr>
                 <tr>
-                    <td>10:30 - 11:15</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11:15 - 12:00</td>
-                    <td></td>
+                    <td>9:15 - 9:45</td>
+                    <td>University of Alberta</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>12:00 - 12:30</td>
+                    <td>9:45 - 10:15</td>
+                    <td>Li Chen</td>
+                    <td>Co-founder of Unitree</td>
+                </tr>
+                <tr>
+                    <td>10:15 - 10:20</td>
+                    <td>Quick Break</td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td>10:20 - 10:50</td>
+                    <td>Lightning Talks</td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td>10:50 - 11:20</td>
+                    <td>Wenchao Ding</td>
+                    <td>Tenure-track associate professor at the Academy for Engineering and Technology (FAET), Fudan University</td>
+                </tr>
+                <tr>
+                    <td>11:20 - 11:50</td>
+                    <td>Speaker</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11:50 - 12:20</td>
+                    <td>Panel Discussion</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12:20 - 12:30</td>
+                    <td>Best Paper</td>
+                    <td>Best Paper Award Session for our workshop</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
 
     
 	<footer>
