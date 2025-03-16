@@ -84,6 +84,20 @@
     tbody tr:hover {
         background-color: #f1f1f1; /* 悬停背景色 */
     }
+
+    /* 突出行样式 */
+    .highlight-row {
+        background-color: #fff3cd; /* 浅黄色背景 */
+        font-weight: bold; /* 加粗文字 */
+        color: #856404; /* 深棕色文字 */
+    }
+
+    /* 弱化行样式 */
+    .fade-row {
+        opacity: 0.6; /* 降低透明度以弱化显示 */
+        font-style: italic; /* 斜体显示 */
+        color: #6c757d; /* 灰色文字 */
+    }
 </style>
 
 <style>
@@ -156,47 +170,49 @@
                     <td>Welcome and Introduction</td>
                 </tr>
                 <tr>
-                    <td>8:45 - 9:15</td>
+                    <td>8:45 - 9:10</td>
                     <td>Bo An</td>
-                    <td>President's Chair Professor and Head of Division of Artificial Intelligence at the College of Computing and Data Science of the Nanyang Technological University (NTU)</td>
+                    <td>From RL-based to LLM-powered agents</td>
                 </tr>
                 <tr>
-                    <td>9:15 - 9:45</td>
-                    <td>University of Alberta</td>
-                    <td></td>
+                    <td>9:10 - 9:35</td>
+                    <td>Stefano V. Albrecht</td>
+                    <td>(补充)</td>
                 </tr>
                 <tr>
-                    <td>9:45 - 10:15</td>
-                    <td>Li Chen</td>
-                    <td>Co-founder of Unitree</td>
+                    <td>9:35 - 10:00</td>
+                    <td>Tao Kong</td>
+                    <td>(补充)</td>
+                </tr>
+                <tr class="fade-row">
+                    <td>10:00 - 10:15</td>
+                    <td colspan="2" style="text-align: center;">Quick Break</td>
+                </tr>
+                <tr class="fade-row">
+                    <td>10:15 - 10:45</td>
+                    <td colspan="2" style="text-align: center;">Lightning Talks</td>
                 </tr>
                 <tr>
-                    <td>10:15 - 10:20</td>
-                    <td>Quick Break</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:20 - 10:50</td>
-                    <td>Lightning Talks</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>10:50 - 11:20</td>
+                    <td>10:45 - 11:10</td>
                     <td>Wenchao Ding</td>
-                    <td>Tenure-track associate professor at the Academy for Engineering and Technology (FAET), Fudan University</td>
+                    <td>(补充)</td>
                 </tr>
                 <tr>
-                    <td>11:20 - 11:50</td>
-                    <td>Speaker</td>
-                    <td></td>
+                    <td>11:10 - 11:35</td>
+                    <td>Yali Du</td>
+                    <td>Towards Cooperative AI agents</td>
                 </tr>
                 <tr>
-                    <td>11:50 - 12:20</td>
-                    <td>Panel Discussion</td>
-                    <td></td>
+                    <td>11:35 - 12:00</td>
+                    <td>Lingyun Xu</td>
+                    <td>(补充)</td>
+                </tr>
+                <tr class="fade-row">
+                    <td>12:00 - 12:10</td>
+                    <td colspan="2" style="text-align: center;">Panel Discussion</td>
                 </tr>
                 <tr>
-                    <td>12:20 - 12:30</td>
+                    <td>12:10 - 12:20</td>
                     <td>Best Paper</td>
                     <td>Best Paper Award Session for our workshop</td>
                 </tr>
@@ -206,7 +222,7 @@
 
     
 	<footer>
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="widget">
@@ -254,7 +270,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div id="sub-footer">
 		<div class="container">
 			<div class="row">
