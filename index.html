@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>IROS Workshop</title>
+<title>AI Agent and Embodied Intelligence Workshop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -92,11 +92,11 @@
     }
 
     .col-md-4 {
-        flex: 0 0 30%; /* 每列占据30%的行宽 */
-        max-width: 30%; /* 确保每列宽度不超过30% */
-        box-sizing: border-box; /* 包含内边距和边框 */
-        display: flex; /* 内部布局使用 Flexbox */
-        justify-content: center; /* 水平居中 */
+        flex: 1 1 0%; /* 每个卡片平均填充整行 */
+        max-width: 100%; /* 最大宽度填满 */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
 
     /* 文本框的样式 */
@@ -108,7 +108,7 @@
         border-radius: 8px; /* 圆角 */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
         width: 100%; /* 占满父容器的宽度 */
-        max-width: 300px; /* 限制模块的最大宽度 */
+        max-width: 450px; /* 限制模块的最大宽度 */
     }
 
     /* 图片样式（方形、大尺寸） */
@@ -134,18 +134,6 @@
         font-size: 14px;
         color: #555; /* 较浅灰色文字 */
         margin: 0;
-    }
-
-    /* 为小屏设备调整列布局 */
-    @media (max-width: 768px) {
-        .col-md-4 {
-            flex: 0 0 100%; /* 小屏设备每列占100%宽度 */
-            max-width: 100%; /* 确保模块填充宽度 */
-        }
-
-        .textbox {
-            margin-bottom: 20px; /* 每行之间添加下间距 */
-        }
     }
 </style>
 
@@ -226,9 +214,11 @@
 					<h1 class="aligncenter">About</h1>
 					<span class="clear spacer_responsive_hide_mobile" style="height:13px;display:block;"></span>
 					<p style="text-align: left;">
-                    The workshop "AI Agent and Embodied Intelligence" aims to explores the intersection of AI agents and embodied intelligence. With the rapid development of LLM, the ability of AI agents and embodied AI are also advanced. Although both of the two areas focus on how intelligent systems can perceive, reason, and act in environments, their technical focuses are currently quite different. Therefore, this workshop will try to find the technical distinctions between the two fields. We will try to find what is truly unique to UI/game/other virtual agents (tool usage, memory, screen I/O, etc.) versus embodied agents (sensor noise, reasoning in 3D environment, action generalization, safety, etc.).<br><br>
+                    <span style="color: #222; font-size: 16px; line-height: 1.7;">
+                    The workshop "AI Agent and Embodied Intelligence" aims to explore the intersection of AI agents and embodied intelligence. With the rapid development of LLMs, the abilities of AI agents and embodied AI are also advancing. Although both areas focus on how intelligent systems can perceive, reason, and act in environments, their technical focuses currently differ. Therefore, this workshop will seek to identify the technical distinctions between these two fields. We aim to explore what is truly unique to UI/game/other virtual agents (tool usage, memory, screen I/O, etc.) versus embodied agents (sensor noise, reasoning in 3D environments, action generalization, safety, etc.).<br><br>
 
-                    We will also delve into comparing the technical pathways of AI agent and embodied AI, addressing several pressing questions: How can UI agents borrow embodied strategies for 3D spatial reasoning in desktop environments? Can game agents transfer hierarchical planning skills to robotic manipulation? What are the common benchmarks or foundation models (e.g., multimodal LLMs, diffusion policies) that can unite these fields? These discussions will challenge conventional paradigms and explore innovative designs and applications. By bringing together experts from relative areas, this workshop will foster interdisciplinary dialogue to chart the future of AI agent. Join us to shape the next generation of AI agent and embodied intelligence.
+                    We will also compare the technical pathways of AI agents and embodied AI, addressing several pressing questions: How can UI agents borrow embodied strategies for 3D spatial reasoning in desktop environments? Can game agents transfer hierarchical planning skills to robotic manipulation? What are the common benchmarks or foundation models (e.g., multimodal LLMs, diffusion policies) that can unite these fields? These discussions will challenge conventional paradigms and explore innovative designs and applications. By bringing together experts from related areas, this workshop will foster interdisciplinary dialogue to chart the future of AI agents. Join us to shape the next generation of AI agent and embodied intelligence.
+                    </span>
 
 					</p>
                 </div>
@@ -273,42 +263,83 @@
                 </div>
             </div>
             <h1 class="aligncenter">Call for Lighting Presentation</h1>
-            <p style="text-align: left;">
+            <div style="text-align: left;">
+                <div style="color: #222; font-size: 16px; line-height: 1.7;">
+                    <div style="font-size:1.12em; font-weight:600; margin-bottom: 6px;">
+                        We especially encourage PhD students and young scholars to present their work at our workshop!
+                    </div>
+                    <div style="margin-bottom:18px;">
+                        We welcome both published papers (which you can present to a new, interdisciplinary audience) and work-in-progress papers (to receive valuable feedback from the community).
+                    </div>
 
-                Furthermore, we especially encourage PhD students and young scholars to present their work on our workshop! We welcome both published papers (which you can present to a new, interdisciplinary audience) and work-in-progress papers (to get valuable feedback from the community).<br>
-                Request to present:<br>
-                Authors are invited to submit a simple form including:<br>
-                Title of the paper<br>
-                Author list<br>
-                Venue where the paper was accepted<br>
-                Link to the official version (e.g., OpenReview/Proceedings PDF)<br>
-                Submission Form: XXX<br>
-                Review Process:<br>
-                Submissions will undergo a light review mainly for relevance to our workshop and interest to the audience.<br>
-                Registration Requirement:<br>
-                At least one author of each accepted submission must register for the conference and present the paper.<br>
-                
-                Important Dates:<br>
-                Deadline: reviews will begin on 1 October and continue on a rolling basis until the venue reaches capacity<br>
-                Notification of acceptance: shortly after submission<br>
-                
-                Topics of Interest:<br>
-                Relevant topics include, but are not limited to:<br>
-                •	Technical Distinctions: Comparative analysis of algorithms and architectures for virtual vs. embodied agents.<br>
-                •	Cross-Domain Transfer: Techniques for transferring skills from virtual environments (games, simulators) to physical robots, and vice-versa.<br>
-                •	Spatial Reasoning: Methods for 2D/3D reasoning in both desktop and physical environments.<br>
-                •	Memory and Planning: Hierarchical planning, long-horizon task execution, and memory mechanisms for both agent types.<br>
-                •	Foundation Models for Agents: The role of multimodal LLMs, vision-language models, and diffusion policies in unifying the fields.<br>
-                •	Benchmarks and Evaluation: Novel benchmarks, tasks, or metrics that can fairly evaluate both virtual and embodied agents.<br>
-                •	Safety and Robustness: Addressing failure modes, safety constraints, and dealing with sensor noise or unexpected inputs.<br>
-                •	Human-Agent Interaction: Interaction paradigms for virtual (UI) and embodied (robotic) agents.<br>
-                
-                
-                
-                Presentation Format: All accepted authors will be allocated a 10-minute slot for their presentation during the dedicated spotlight sessions.<br>
-                
-                Award Opportunity: The most engaging presentations by early-career researchers will be considered for the Best Presentation Award.<br>
-            </p>
+                    <div style="font-size:1.08em; font-weight:600; margin-top:22px; margin-bottom:8px;">
+                        Request to Present
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li>Authors are invited to submit a brief form including:
+                            <ul style="margin-top:5px;">
+                                <li>Title of the paper</li>
+                                <li>Author list</li>
+                                <li>Venue where the paper was accepted</li>
+                                <li>Link to the official version (e.g., OpenReview/Proceedings PDF)</li>
+                            </ul>
+                        </li>
+                        <li style="margin-top:4px;">Submission Form: <span style="color:#333;">[Link Coming Soon]</span></li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:18px; margin-bottom:8px;">
+                        Review Process
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li>Submissions will undergo a light review, focusing mainly on their relevance to our workshop and interest to the audience.</li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:18px; margin-bottom:8px;">
+                        Registration Requirement
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li>At least one author of each accepted submission must register for the conference and present the work during the session.</li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:22px; margin-bottom:8px;">
+                        Important Dates
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li><b>Deadline:</b> Reviews begin on <b>1 October</b> and are conducted on a rolling basis until all spots are filled.</li>
+                        <li><b>Notification of acceptance:</b> Shortly after submission, on a rolling basis.</li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:22px; margin-bottom:8px;">
+                        Topics of Interest
+                    </div>
+                    <div style="margin-bottom:6px;">Relevant topics include, but are not limited to:</div>
+                    <ul style="margin-left:21px;">
+                        <li>Technical Distinctions: Comparative analysis of algorithms and architectures for virtual vs. embodied agents.</li>
+                        <li>Cross-Domain Transfer: Techniques for transferring skills from virtual environments (games, simulators) to physical robots, and vice-versa.</li>
+                        <li>Spatial Reasoning: Methods for 2D/3D reasoning in both desktop and physical environments.</li>
+                        <li>Memory and Planning: Hierarchical planning, long-horizon task execution, and memory mechanisms for both agent types.</li>
+                        <li>Foundation Models for Agents: The role of multimodal LLMs, vision-language models, and diffusion policies in unifying the fields.</li>
+                        <li>Benchmarks and Evaluation: Novel benchmarks, tasks, or metrics for fair evaluation of both virtual and embodied agents.</li>
+                        <li>Safety and Robustness: Handling failure modes, safety constraints, sensor noise, and unexpected inputs.</li>
+                        <li>Human-Agent Interaction: Interaction paradigms for both virtual (UI) and embodied (robotic) agents.</li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:22px; margin-bottom:8px;">
+                        Presentation Format
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li>Each accepted author will be allocated a 10-minute slot for their presentation during spotlight sessions.</li>
+                    </ul>
+
+                    <div style="font-size:1.08em; font-weight:600; margin-top:18px; margin-bottom:8px;">
+                        Award Opportunity
+                    </div>
+                    <ul style="margin-left:21px;">
+                        <li>The most engaging presentations by early-career researchers will be considered for the Best Presentation Award.</li>
+                    </ul>
+                </div>
+
+            </div>
 
             <br><br>
 
@@ -392,54 +423,6 @@
     <div class="row">
         <div class="col-md-4">
             <div class="textbox">
-                <img src="img/speaker1.jpeg">
-                <h3>Bo An</h3>
-                <p>President's Chair Professor, Nanyang Technological University (NTU). 		
-                    Male, Senior Professor from academia Prof. Bo An is a President's Chair Professor and Head of Division of Artificial Intelligence at the College of Computing and Data Science of the Nanyang Technological University (NTU). He is also Director for Centre of AI-for-X of NTU. 
-                    </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="textbox">
-                <img src="img/speaker2.jpeg" alt="(补充)">
-                <h3>Yali Du</h3>
-                <p>Female, Associate Professor from academia
-                    Dr Yali Du is a Senior Lecturer (Associate Professor) in AI at King’s College London, and a Turing Fellow at The Alan Turing Institute. She leads the Cooperative AI Lab. Her research aims to enable machines to exhibit cooperative and safe behaviour in intelligent decision making tasks. Her work focuses on reinforcement learning and multi-agent cooperation, with topics such as generalization, zero-shot coordination, evaluation of human and AI players, and social agency (e.g., human-involved learning, safety, and ethics). She was chosen for the AAAI New Faculty Highlights award (2023), Rising Star in AI 2023. She has given tutorials on cooperative multi-agent learning at ACML 2022 and AAAI 2023. She serves as the editors for Journal of AAMAS and IEEE Transactions on AI, Area Chair for NeurIPS 2024. She also serves in organising committee for AAMAS 2023 and NeurIPS 2024. Her research is also supported by the Engineering and Physical Sciences Research Council(EPSRC) and AI Safety Insitute (AISI).
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="textbox">
-                <img src="img/speaker3.jpeg" alt="Wenchao Ding">
-                <h3>Wenchao Ding</h3>
-                <p>Associate professor, Fudan University
-                    Male, Junior Professor from academia Dr. Wenchao Ding has rich experience in both academia and industry. Before joining Fudan University, Dr. Wenchao Ding was a research scientist and technical lead at Autonomous Driving Solution (ADS), Huawei, where he led a team working on cutting-edge prediction and decision-making problems for autonomous vehicles. He is also the co-founder of Tashi Zhihang, a start-up focusing on embodied AI.
-                    </p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="textbox">
-                <img src="img/speaker4.jpg" alt="Tao Kong">
-                <h3>Tao Kong</h3>
-                <p>Male, Expert from Industry
-                    Male from industry. At ByteDance Research, I spearhead research initiatives aimed at developing next - generation robot technologies and systems. My research lies in the field of robot learning and computer vision, with a particular emphasis on devising scalable, AI powered algorithms and systems that enable robots to perceive and act in the real world. I received my Ph.D. from Tsinghua University, advised by Fuchun Sun. I visited the University of Pennsylvania, working with Jianbo Shi.
-                    </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="textbox">
-                <img src="img/speaker5.jpeg" alt="Lingyun Xu">
-                <h3>Lingyun Xu</h3>
-                <p>Male, Expert from Industry
-                    Female from industry.
-                    Xu Lingyun, Senior Algorithm Architect of Chang'an Technology. She used to be a doctoral student in the field of artificial intelligence at the Chinese Academy of Sciences, and she once conducted relevant research in the field of artificial intelligence at the Robotics Institute of Carnegie Mellon University.
-                    </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="textbox">
                 <img src="img/speaker6.jpeg" alt="Stefano V. Albrecht">
                 <h3>Stefano V. Albrecht</h3>
                 <p>Associate Professor, University of Edinburgh
@@ -447,6 +430,33 @@
                     </p>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="textbox">
+                <img src="img/speaker2.jpg" alt="(补充)">
+                <h3>Meng Fang</h3>
+                <p>Assistant Professor in AI at University of Liverpool. Visiting (assistant) professor at Eindhoven University of Technology (TU/e). Received Ph.D. from University of Technology Sydney, advised by Prof. Dacheng Tao, and then worked as a postdoc with Prof. Trevor Cohn at the University of Melbourne NLP group. Had been a research scientist / intern at Tencent Robotics X / AI, CSIRO and Microsoft Research Asia before.
+
+                    Research focuses on building agents capable of human-like learning, reasoning, and decision-making. Main areas include NLP and RL.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="textbox">
+                <img src="img/speaker4.jpeg" alt="Tao Kong">
+                <h3>Jianhao Jiao</h3>
+                <p>Senior Research Fellow at University College London (UCL), Department of Computer Science. Research topics include mobile robots, navigation, and embodied intelligence. Works in the Robot Perception and Learning Lab (Prof. Dimitrios Kanoulas). Research in SLAM, sensor fusion, and autonomous navigation; notable projects: M-LOAM, FusionPortable, OpenNavMap. Aims to develop lifelong cognitive spatial memory mechanisms for autonomous systems supporting sustainable autonomy and dynamic map maintenance for applications in logistics, infrastructure inspection, and rescue missions.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="textbox">
+                <img src="img/speaker3.jpg" alt="Wenchao Ding">
+                <h3>Ze Ji</h3>
+                <p>Senior Lecturer (Associate Professor) in Robotics and Autonomous Systems at Cardiff University. Co-leader of the AI and Robotics research theme and theme leader/co-investigator at IROHMS. Manages the Robotics and Autonomous Systems Lab with advanced robotic facilities. Holds a PhD from Cardiff University (EC FP6 project TAI-CHI), an MSc from Birmingham University, and a BEng from Jilin University. Has experience in academia and industry (Dyson, Lenovo, Autonomous Surface Vehicles) and participated in several EU FP6 & FP7 robotics projects (TAI-CHI, IWARD, ROBOSKIN, SRS).</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
